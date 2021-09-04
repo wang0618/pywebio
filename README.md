@@ -32,7 +32,7 @@
         <img src="https://img.shields.io/github/license/wang0618/PyWebIO.svg" alt="License">
     </a>
     <br/>
-    <a href="https://pywebio.readthedocs.io">[Document]</a> | <a href="http://pywebio-demos.demo.wangweimin.site/">[Demos]</a> | <a href="https://github.com/wang0618/PyWebIO/wiki/Why-PyWebIO%3F">[Why PyWebIO?]</a>
+    <a href="https://pywebio.readthedocs.io">[Document]</a> | <a href="http://pywebio-demos.pywebio.online/">[Demos]</a> | <a href="https://github.com/wang0618/PyWebIO/wiki/Why-PyWebIO%3F">[Why PyWebIO?]</a>
 </p>
 
 [English](README.md) | [中文](README-zh.md)
@@ -98,10 +98,10 @@ if __name__ == '__main__':
     bmi()
 ```
 
-This is just a very simple script if you ignore PyWebIO, but using the input and output functions provided by PyWebIO, you can interact with the code in the browser [[demo]](http://pywebio-demos.demo.wangweimin.site/bmi):
+This is just a very simple script if you ignore PyWebIO, but using the input and output functions provided by PyWebIO, you can interact with the code in the browser [[demo]](http://pywebio-demos.pywebio.online/bmi):
 
 <p align="center">
-    <a href="http://pywebio-demos.demo.wangweimin.site/?pywebio_api=bmi">
+    <a href="http://pywebio-demos.pywebio.online/?pywebio_api=bmi">
         <img src="https://raw.githubusercontent.com/wang0618/PyWebIO/dev/docs/assets/demo.gif" alt="PyWebIO demo" width="400px"/>
     </a>
 </p>
@@ -150,8 +150,8 @@ For integration with other web frameworks, please refer to [document](https://py
 
 ## Demos
 
- - [Basic demo](http://pywebio-demos.demo.wangweimin.site/) : PyWebIO basic input and output demos and some small applications written using PyWebIO.
- - [Data visualization demo](http://pywebio-charts.demo.wangweimin.site/) : Data visualization with the third-party libraries, e.g., `plotly`, `bokeh`, `pyecharts`.
+ - [Basic demo](http://pywebio-demos.pywebio.online/) : PyWebIO basic input and output demos and some small applications written using PyWebIO.
+ - [Data visualization demo](http://pywebio-charts.pywebio.online/) : Data visualization with the third-party libraries, e.g., `plotly`, `bokeh`, `pyecharts`.
 
 ## Document
 

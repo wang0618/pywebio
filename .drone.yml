@@ -26,5 +26,5 @@ steps:
       - >
         docker run --restart=always --name=pywebio-demos -v $PWD:/app_tmp
         --label="traefik.http.services.pywebiodemos.loadbalancer.server.port=80"
-        -d python:3 bash -c "cp -r /app_tmp /app && cd /app && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple . && python3 -m demos --port=80"
+        -d python:3 bash -c "cp -r /app_tmp /app && cd /app && pip3 install . && python3 -m demos --port=80"
       - sleep 5  # wait container start

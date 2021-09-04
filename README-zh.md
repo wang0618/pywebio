@@ -31,7 +31,7 @@
         <img src="https://img.shields.io/github/license/wang0618/PyWebIO.svg" alt="License">
     </a>
     <br/>
-    <a href="https://pywebio.readthedocs.io/zh_CN/latest/">[Document]</a> | <a href="http://pywebio-demos.demo.wangweimin.site/">[Demos]</a> | <a href="https://github.com/wang0618/PyWebIO/wiki/%5B%E4%B8%AD%E6%96%87%5D-Why-PyWebIO%3F">[Why PyWebIO?]</a>
+    <a href="https://pywebio.readthedocs.io/zh_CN/latest/">[Document]</a> | <a href="http://pywebio-demos.pywebio.online/">[Demos]</a> | <a href="https://github.com/wang0618/PyWebIO/wiki/%5B%E4%B8%AD%E6%96%87%5D-Why-PyWebIO%3F">[Why PyWebIO?]</a>
 </p>
 
 [English](README.md) | [中文](README-zh.md)
@@ -99,10 +99,10 @@ if __name__ == '__main__':
 ```
 
 
-如果没有使用PyWebIO，这只是一个非常简单的脚本，而通过使用PyWebIO提供的输入输出函数，你可以在浏览器中与代码进行交互 [[demo]](http://pywebio-demos.demo.wangweimin.site/bmi)：
+如果没有使用PyWebIO，这只是一个非常简单的脚本，而通过使用PyWebIO提供的输入输出函数，你可以在浏览器中与代码进行交互 [[demo]](http://pywebio-demos.pywebio.online/bmi)：
 
 <p align="center">
-    <a href="http://pywebio-demos.demo.wangweimin.site/?pywebio_api=bmi">
+    <a href="http://pywebio-demos.pywebio.online/?pywebio_api=bmi">
         <img src="https://raw.githubusercontent.com/wang0618/PyWebIO/dev/docs/assets/demo_zh.gif" alt="PyWebIO demo" width="400px"/>
     </a>
 </p>
@@ -151,8 +151,8 @@ if __name__ == "__main__":
 
 ## Demos
 
- - [基本demo](http://pywebio-demos.demo.wangweimin.site/) : 包含PyWebIO基本输入输出演示和使用PyWebIO编写的小应用
- - [数据可视化demo](http://pywebio-charts.demo.wangweimin.site/) : 使用 bokeh、plotly、pyecharts 等库进行数据可视化
+ - [基本demo](http://pywebio-demos.pywebio.online/) : 包含PyWebIO基本输入输出演示和使用PyWebIO编写的小应用
+ - [数据可视化demo](http://pywebio-charts.pywebio.online/) : 使用 bokeh、plotly、pyecharts 等库进行数据可视化
 
 ## Document
 
