@@ -37,7 +37,7 @@ Assuming that the PyWebIO application is running at the ``localhost:5000`` addre
              proxy_read_timeout 300s;
              proxy_send_timeout 300s;
              proxy_http_version 1.1;
-             proxy_set_header Host $host:$server_port;
+             proxy_set_header Host $http_host;
              proxy_set_header Upgrade $http_upgrade;
              proxy_set_header Connection $connection_upgrade;
              proxy_pass http://localhost:5000/;
