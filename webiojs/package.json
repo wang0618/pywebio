@@ -22,7 +22,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "highlight.js": "^10.5.0",
-    "marked": "^1.2.8",
+    "marked": "^2.0.0",
     "tsify": "^4.0.1",
     "typescript": "^3.8.3",
     "vinyl-buffer": "^1.0.1",
