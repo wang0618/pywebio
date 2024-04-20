@@ -21,13 +21,14 @@ percy-selenium
 coverage
 
 # doc building requirements
-Jinja2==3.0.3
-sphinx==3.*
+Jinja2
+sphinx
 sphinx-tabs
-sphinx-rtd-theme==0.4.*
-sphinx-toolbox==2.15.0
+sphinx-rtd-theme
+sphinx-toolbox
 sphinx-intl
-pywebio_battery
+# pywebio_battery in master branch
+https://github.com/pywebio/pywebio-battery/archive/refs/heads/master.zip
 
 # demo running requirements
 numpy

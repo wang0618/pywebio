@@ -37,6 +37,9 @@ extensions = [
     'sphinx_toolbox.collapse',
 ]
 
+# https://github.com/sphinx-doc/sphinx/issues/6316
+toc_object_entries = False
+
 primary_domain = "py"
 default_role = "py:obj"
 # intersphinx_mapping = {"python": ("https://docs.python.org/3.6/", None)}
@@ -74,6 +77,8 @@ html_static_path = ['static']
 def setup(app):
     """Configure Sphinx"""
     app.add_css_file('pywebio.css')
+    # from docutils.parsers.rst.directives.admonitions import Note
+    # app.add_directive('collapse', Note)
 
 
 # -- Extension configuration -------------------------------------------------

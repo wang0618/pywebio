@@ -35,11 +35,11 @@ ready(function () {
 
 // Translated Version Prompt
 const user_lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase().split('-')[0];
-const doc_lang = window.location.pathname.split('/')[1].split('_')[0];
+const doc_lang = window.location.pathname.split('/')[1].split('-')[0];
 if (user_lang !== doc_lang && ['zh', 'en'].indexOf(user_lang) !== -1) {
     let u = new URL(window.location.href);
     let t = u.pathname.split('/');
-    t[1] = user_lang === 'en' ? 'en' : 'zh_CN';
+    t[1] = user_lang === 'en' ? 'en' : 'zh-cn';
     u.pathname = t.join('/');
 
     let turl = u.href;
