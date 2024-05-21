@@ -65,8 +65,9 @@ async def main():
             break
         if data['cmd'] == t('Multiline Input', '多行输入'):
             data['msg'] = '\n' + await textarea('Message content', help_text=t('Message content supports Markdown syntax', '消息内容支持Markdown语法'))
-        put_markdown('`%s`: %s' % (nickname, data['msg']), sanitize=True, scope='msg-box')
-        chat_msgs.append((nickname, data['msg']))
+        if not(data['msg'] is None):
+            put_markdown('`%s`: %s' % (nickname, data['msg']), sanitize=True, scope='msg-box')
+            chat_msgs.append((nickname, data['msg']))
 
     refresh_task.close()
     toast("You have left the chat room")
