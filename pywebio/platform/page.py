@@ -2,8 +2,7 @@ import json
 import urllib.parse
 from collections import namedtuple
 from collections.abc import Mapping, Sequence
-from functools import lru_cache
-from functools import partial
+from functools import lru_cache, partial
 from os import path, environ
 
 from tornado import template
@@ -337,13 +336,14 @@ def config(*, title=None, description=None, theme=None, js_code=None, js_file=[]
         def __call__(self, func):
             self.called = True
             try:
-                func = partial(func)  # to make a copy of the function
+                _func = partial(func)  # to make a copy of the function
                 for key, val in configs.items():
                     if val:
-                        setattr(func, '_pywebio_%s' % key, val)
+                        setattr(_func, '_pywebio_%s' % key, val)
+                _func.__name__ = func.__name__
+                return _func
             except Exception:
-                pass
-            return func
+                return func
 
         def __del__(self):  # if not called as decorator, set the config to global
             if self.called:
