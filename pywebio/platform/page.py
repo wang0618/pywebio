@@ -336,14 +336,14 @@ def config(*, title=None, description=None, theme=None, js_code=None, js_file=[]
         def __call__(self, func):
             self.called = True
             try:
-                _func = partial(func)  # to make a copy of the function
+                func = partial(func)  # to make a copy of the function
                 for key, val in configs.items():
                     if val:
-                        setattr(_func, '_pywebio_%s' % key, val)
-                _func.__name__ = func.__name__
-                return _func
+                        setattr(func, '_pywebio_%s' % key, val)
+                func.__name__ = func.func.__name__
             except Exception:
-                return func
+                pass
+            return func
 
         def __del__(self):  # if not called as decorator, set the config to global
             if self.called:
