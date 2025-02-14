@@ -2,8 +2,7 @@ import json
 import urllib.parse
 from collections import namedtuple
 from collections.abc import Mapping, Sequence
-from functools import lru_cache
-from functools import partial
+import functools
 from os import path, environ
 
 from tornado import template
@@ -57,7 +56,7 @@ def render_page(app, protocol, cdn):
                                     css_file=meta.css_file or [], theme=theme, manifest=manifest)
 
 
-@lru_cache(maxsize=64)
+@functools.lru_cache(maxsize=64)
 def check_theme(theme):
     """check theme file existence"""
     if not theme:
@@ -336,14 +335,18 @@ def config(*, title=None, description=None, theme=None, js_code=None, js_file=[]
 
         def __call__(self, func):
             self.called = True
+
+            @functools.wraps(func)
+            def wrapper(*args, **kwargs):
+                return func(*args, **kwargs)
+
             try:
-                func = partial(func)  # to make a copy of the function
                 for key, val in configs.items():
                     if val:
-                        setattr(func, '_pywebio_%s' % key, val)
+                        setattr(wrapper, '_pywebio_%s' % key, val)
             except Exception:
                 pass
-            return func
+            return wrapper
 
         def __del__(self):  # if not called as decorator, set the config to global
             if self.called:
