@@ -1,0 +1,7 @@
+Use `actions()` to perform simple selection
+
+confirm = actions('Confirm to delete file?', ['confirm', 'cancel'],
+                      help_text='Unrecoverable after file deletion')
+if confirm=='confirm':  # ..doc-only
+    ...  # ..doc-only
+put_markdown('You clicked the `%s` button' % confirm)  # ..demo-only

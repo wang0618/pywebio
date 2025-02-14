@@ -1,0 +1,10 @@
+`put_scrollable()` usage
+
+import time
+
+put_scrollable(put_scope('scrollable'), height=200, keep_bottom=True)
+put_text("You can click the area to prevent auto scroll.", scope='scrollable')
+
+while 1:
+    put_text(time.time(), scope='scrollable')
+    time.sleep(0.5)

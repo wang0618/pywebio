@@ -1,0 +1,3 @@
+`put_button()` usage
+
+put_button("click me", onclick=lambda: toast("Clicked"), color='success', outline=True)

@@ -1,0 +1,7 @@
+`put_grid()` usage
+
+put_grid([
+    [put_text('A'), put_text('B'), put_text('C')],
+    [None, span(put_text('D'), col=2, row=1)],
+    [put_text('E'), put_text('F'), put_text('G')],
+], cell_width='100px', cell_height='100px')

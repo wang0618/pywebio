@@ -1,0 +1,8 @@
+`put_row()` usage
+
+# Two code blocks of equal width, separated by 10 pixels
+put_row([put_code('A'), None, put_code('B')])
+## ----
+
+# The width ratio of the left and right code blocks is 2:3, which is equivalent to size='2fr 10px 3fr'
+put_row([put_code('A'), None, put_code('B')], size='40% 10px 60%')

@@ -1,0 +1,19 @@
+Input Group validation
+
+def check_age(p):  # single input item validation  # ..demo-only
+    if p < 10:                  # ..demo-only
+        return 'Too young!!'    # ..demo-only
+    if p > 60:                  # ..demo-only
+        return 'Too old!!'      # ..demo-only
+                                # ..demo-only
+def check_form(data):  # return (input name, error msg) when validation fail
+    if len(data['name']) > 6:
+        return ('name', 'Name too long!')
+    if data['age'] <= 0:
+        return ('age', 'Age can not be negative!')
+
+data = input_group("Basic info",[           # ..demo-only
+   input('Input your name', name='name'),   # ..demo-only
+   input('Input your age', name='age', type=NUMBER, validate=check_age)  # ..demo-only
+], validate=check_form)              # ..demo-only
+put_text(data['name'], data['age'])    # ..demo-only

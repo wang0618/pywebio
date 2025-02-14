@@ -1,0 +1,18 @@
+Nested Scope
+
+with use_scope('A'):
+    put_text('Text in scope A')
+
+    with use_scope('B'):
+        put_text('Text in scope B')
+
+with use_scope('C'):
+    put_text('Text in scope C')
+
+put_html("""<style>                                          # ..demo-only
+#pywebio-scope-A {border: 1px solid red;}                    # ..demo-only
+#pywebio-scope-B {border: 1px solid blue;margin:2px}         # ..demo-only
+#pywebio-scope-C {border: 1px solid green;margin-top:2px}    # ..demo-only
+</style>""")                                                 # ..demo-only
+put_text()                                                   # ..demo-only
+put_buttons([('Put text to %s' % i, i) for i in ('A', 'B', 'C')], lambda s: put_text(s, scope=s))  # ..demo-only

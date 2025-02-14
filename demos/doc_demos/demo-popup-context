@@ -1,0 +1,8 @@
+`popup()` as context manager
+
+with popup('Popup title') as s:
+    put_html('<h3>Popup Content</h3>')
+    put_text('html: <br/>')
+    put_buttons([('clear()', s)], onclick=clear)
+
+put_text('Also work!', scope=s)

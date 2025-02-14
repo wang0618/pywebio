@@ -1,0 +1,10 @@
+`use_scope()`'s `clear` parameter
+
+with use_scope('scope2'):
+    put_text('create scope2')
+
+put_text('text in parent scope of scope2')
+## ----
+
+with use_scope('scope2', clear=True):  # enter the existing scope and clear the previous content
+    put_text('text in scope2')

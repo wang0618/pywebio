@@ -1,0 +1,7 @@
+Code editing by using textarea
+
+code = textarea('Code Edit', code={
+    'mode': "python",
+    'theme': 'darcula',
+}, value='import something\n# Write your python code')
+put_code(code, language='python')  # ..demo-only

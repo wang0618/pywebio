@@ -1,0 +1,13 @@
+Event callback
+
+from functools import partial
+
+def edit_row(choice, row):
+    put_text("You click %s button ar row %s" % (choice, row))
+
+put_table([
+    ['Idx', 'Actions'],
+    [1, put_buttons(['edit', 'delete'], onclick=partial(edit_row, row=1))],
+    [2, put_buttons(['edit', 'delete'], onclick=partial(edit_row, row=2))],
+    [3, put_buttons(['edit', 'delete'], onclick=partial(edit_row, row=3))],
+])

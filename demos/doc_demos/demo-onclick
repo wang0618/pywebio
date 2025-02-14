@@ -1,0 +1,10 @@
+Click callback on any output
+
+put_image('some-image.png').onclick(lambda: toast('You click an image'))  # ..doc-only
+put_image('https://www.python.org/static/img/python-logo.png').onclick(lambda: toast('You click an image'))  # ..demo-only
+
+# set onclick in combined output
+put_table([
+    ['Commodity', 'Price'],
+    ['Apple', put_text('5.5').onclick(lambda: toast('You click the text'))],
+])

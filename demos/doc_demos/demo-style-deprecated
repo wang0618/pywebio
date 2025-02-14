@@ -1,0 +1,21 @@
+`style()` usage
+
+style(put_text('Red'), 'color:red')
+
+## ----
+style([
+    put_text('Red'),
+    put_markdown('~~del~~')
+], 'color:red')
+
+## ----
+put_table([
+    ['A', 'B'],
+    ['C', style(put_text('Red'), 'color:red')],
+])
+
+## ----
+put_collapse('title', style([
+    put_text('text'),
+    put_markdown('~~del~~'),
+], 'margin-left:20px'))

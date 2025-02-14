@@ -1,0 +1,11 @@
+`popup()` usage
+
+popup('popup title', 'popup text content', size=PopupSize.SMALL)
+## ----
+
+popup('Popup title', [
+    put_html('<h3>Popup Content</h3>'),
+    'html: <br/>',
+    put_table([['A', 'B'], ['C', 'D']]),
+    put_buttons(['close_popup()'], onclick=lambda _: close_popup())
+])

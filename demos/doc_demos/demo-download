@@ -1,0 +1,3 @@
+`download()` usage
+
+put_button('Click to download', lambda: download('hello-world.txt', b'hello world!'))

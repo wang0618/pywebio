@@ -1,0 +1,15 @@
+Output Matplotlib plot
+
+import matplotlib
+import matplotlib.pyplot as plt
+import io
+import pywebio
+
+matplotlib.use('agg')  # required, use a non-interactive backend
+
+fig, ax = plt.subplots()  # Create a figure containing a single axes.
+ax.plot([1, 2, 3, 4], [1, 4, 2, 3])  # Plot some data on the axes.
+
+buf = io.BytesIO()
+fig.savefig(buf)
+pywebio.output.put_image(buf.getvalue())

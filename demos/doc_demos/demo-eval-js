@@ -1,0 +1,20 @@
+`eval_js()` usage
+
+current_url = eval_js("window.location.href")
+put_text(current_url)  # ..demo-only
+
+## ----
+function_res = eval_js('''(function(){
+    var a = 1;
+    a += b;
+    return a;
+})()''', b=100)
+put_text(function_res)  # ..demo-only
+
+## ----
+promise_res = eval_js('''new Promise(resolve => {
+    setTimeout(() => {
+        resolve('Returned inside callback.');
+    }, 2000);
+});''')
+put_text(promise_res)  # ..demo-only

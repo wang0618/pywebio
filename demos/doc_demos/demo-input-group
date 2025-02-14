@@ -1,0 +1,13 @@
+Input Group
+
+def check_age(p):  # ..demo-only
+    if p < 10:                  # ..demo-only
+        return 'Too young!!'    # ..demo-only
+    if p > 60:                  # ..demo-only
+        return 'Too old!!'      # ..demo-only
+                                # ..demo-only
+data = input_group("Basic info",[
+  input('Input your name', name='name'),
+  input('Input your age', name='age', type=NUMBER, validate=check_age)
+])
+put_text(data['name'], data['age'])

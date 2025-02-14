@@ -1,0 +1,10 @@
+`pin_wait_change()` example
+
+put_input('a', type='number', value=0)
+put_input('b', type='number', value=0)
+
+while True:
+    changed = pin_wait_change('a', 'b')
+    with use_scope('res', clear=True):
+        put_code(changed)
+        put_text("a + b = %s" % (pin.a + pin.b))

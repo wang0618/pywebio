@@ -1,0 +1,5 @@
+Run shell and output to code block
+
+cmd = "ls -l"
+put_logbox('shell_output')
+run_shell(cmd, output_func=lambda msg: logbox_append('shell_output', msg))

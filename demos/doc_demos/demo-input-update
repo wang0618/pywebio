@@ -1,0 +1,13 @@
+Dependent input items in input group
+
+country2city = {
+    'China': ['Beijing', 'Shanghai', 'Hong Kong'],
+    'USA': ['New York', 'Los Angeles', 'San Francisco'],
+}
+countries = list(country2city.keys())
+location = input_group("Select a location", [
+    select('Country', options=countries, name='country',
+           onchange=lambda c: input_update('city', options=country2city[c])),
+    select('City', options=country2city[countries[0]], name='city'),
+])
+put_text(location)  # ..demo-only

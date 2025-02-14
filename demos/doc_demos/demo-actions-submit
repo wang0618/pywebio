@@ -1,0 +1,20 @@
+Use `actions()` to replace the default submit button
+
+import json  # ..demo-only
+             # ..demo-only
+info = input_group('Add user', [
+    input('username', type=TEXT, name='username', required=True),
+    input('password', type=PASSWORD, name='password', required=True),
+    actions('actions', [
+        {'label': 'Save', 'value': 'save'},
+        {'label': 'Save and add next', 'value': 'save_and_continue'},
+        {'label': 'Reset', 'type': 'reset', 'color': 'warning'},
+        {'label': 'Cancel', 'type': 'cancel', 'color': 'danger'},
+    ], name='action', help_text='actions'),
+])
+put_code('info = ' + json.dumps(info, indent=4))
+if info is not None:
+    save_user(info['username'], info['password'])  # ..doc-only
+    if info['action'] == 'save_and_continue':
+        add_next()  # ..doc-only
+        put_text('Save and add next...')  # ..demo-only

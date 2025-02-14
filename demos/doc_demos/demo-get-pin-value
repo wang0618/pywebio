@@ -1,0 +1,4 @@
+Use the `pin` object to get the value of pin widget
+
+put_input('pin_name')
+put_buttons(['Get Pin Value'], lambda _: put_text(pin.pin_name))

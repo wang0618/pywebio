@@ -1,0 +1,6 @@
+`wait_scroll_to_bottom()` usage
+
+put_text('This is long text. Scroll to bottom to continue.\n' * 100)
+while True:
+    wait_scroll_to_bottom()
+    put_text("New generated content\n"*20)

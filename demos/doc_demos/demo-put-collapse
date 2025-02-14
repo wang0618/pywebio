@@ -1,0 +1,13 @@
+`put_collapse()` usage
+
+put_collapse('Collapse title', [
+    'text',
+    put_markdown('~~Strikethrough~~'),
+    put_table([
+        ['Commodity', 'Price'],
+        ['Apple', '5.5'],
+    ])
+], open=True)
+
+## ----
+put_collapse('Large text', 'Awesome PyWebIO! '*30)

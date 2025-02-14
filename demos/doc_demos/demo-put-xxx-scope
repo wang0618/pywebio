@@ -1,0 +1,7 @@
+``scope`` parameter of the output function
+
+with use_scope('scope3'):
+    put_text('text1 in scope3')   # output to current scope: scope3
+    put_text('text in ROOT scope', scope='ROOT')   # output to ROOT Scope
+
+put_text('text2 in scope3', scope='scope3')   # output to scope3

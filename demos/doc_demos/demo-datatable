@@ -1,0 +1,19 @@
+`put_datatable()` usage
+
+import urllib.request
+import json
+
+with urllib.request.urlopen('https://fakerapi.it/api/v1/persons?_quantity=30') as f:
+    data = json.load(f)['data']
+
+put_datatable(
+    data,
+    actions=[
+        ("Edit Email", lambda row_id: datatable_update('user', input("Email"), row_id, "email")),
+        ("Insert a Row", lambda row_id: datatable_insert('user', data[0], row_id)),
+        None,  # separator
+        ("Delete", lambda row_id: datatable_remove('user', row_id)),
+    ],
+    onselect=lambda row_id: toast(f'Selected row: {row_id}'),
+    instance_id='user'
+)

@@ -1,0 +1,10 @@
+style of output
+
+put_text('hello').style('color: red; font-size: 20px')
+
+## ----
+# in combined output
+put_row([
+    put_text('hello').style('color: red'),
+    put_markdown('markdown')
+]).style('margin-top: 20px')

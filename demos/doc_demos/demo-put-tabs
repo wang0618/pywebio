@@ -1,0 +1,14 @@
+`put_tabs()` usage
+
+put_tabs([
+    {'title': 'Text', 'content': 'Hello world'},
+    {'title': 'Markdown', 'content': put_markdown('~~Strikethrough~~')},
+    {'title': 'More content', 'content': [
+        put_table([
+            ['Commodity', 'Price'],
+            ['Apple', '5.5'],
+            ['Banana', '7'],
+        ]),
+        put_link('pywebio', 'https://github.com/wang0618/PyWebIO')
+    ]},
+])

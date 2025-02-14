@@ -1,0 +1,4 @@
+Press any key to continue
+
+actions(buttons=["Continue"])
+put_text("Go next")  # ..demo-only

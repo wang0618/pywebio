@@ -1,0 +1,7 @@
+`put_buttons()`
+
+put_buttons([dict(label='success', value='s', color='success')], onclick=...)  # ..doc-only
+put_buttons([  # ..demo-only
+    dict(label=i, value=i, color=i)  # ..demo-only
+    for i in ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']  # ..demo-only
+], onclick=put_text)  # ..demo-only

@@ -1,0 +1,31 @@
+Basic input
+
+# Password input
+password = input("Input password", type=PASSWORD)
+put_text('password = %r' % password)  # ..demo-only
+## ----
+
+# Drop-down selection
+gift = select('Which gift you want?', ['keyboard', 'ipad'])
+put_text('gift = %r' % gift)  # ..demo-only
+## ----
+
+# Checkbox
+agree = checkbox("User Term", options=['I agree to terms and conditions'])
+put_text('agree = %r' % agree)  # ..demo-only
+## ----
+
+# Single choice
+answer = radio("Choose one", options=['A', 'B', 'C', 'D'])
+put_text('answer = %r' % answer)  # ..demo-only
+## ----
+
+# Multi-line text input
+text = textarea('Text Area', rows=3, placeholder='Some text')
+put_text('text = %r' % text)  # ..demo-only
+## ----
+
+# File Upload
+img = file_upload("Select a image:", accept="image/*")
+if img:    # ..demo-only
+    put_image(img['content'], title=img['filename'])  # ..demo-only

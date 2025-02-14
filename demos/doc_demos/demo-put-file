@@ -1,0 +1,5 @@
+`put_file()` usage
+
+content = open('./some-file', 'rb').read()  # ..doc-only
+content = open('README.md', 'rb').read()    # ..demo-only
+put_file('hello-world.txt', content, 'download me')

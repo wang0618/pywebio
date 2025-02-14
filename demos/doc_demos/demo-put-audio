@@ -1,0 +1,4 @@
+`put_audio()` usage
+
+url = "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+put_audio(url)

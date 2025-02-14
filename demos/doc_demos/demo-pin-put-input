@@ -1,0 +1,3 @@
+`put_input()` example
+
+put_input('input', label='This is a input widget')

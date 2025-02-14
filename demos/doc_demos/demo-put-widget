@@ -1,0 +1,24 @@
+Use `put_widget()` to output your own widget
+
+tpl = '''
+<details {{#open}}open{{/open}}>
+    <summary>{{title}}</summary>
+    {{#contents}}
+        {{& pywebio_output_parse}}
+    {{/contents}}
+</details>
+'''
+
+put_widget(tpl, {
+    "open": True,
+    "title": 'More content',
+    "contents": [
+        'text',
+        put_markdown('~~Strikethrough~~'),
+        put_table([
+            ['Commodity', 'Price'],
+            ['Apple', '5.5'],
+            ['Banana', '7'],
+        ])
+    ]
+})

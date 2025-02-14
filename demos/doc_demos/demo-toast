@@ -1,0 +1,6 @@
+`toast()` usage
+
+def show_msg():
+    put_text("You clicked the notification.")
+
+toast('New messages', position='right', color='#2188ff', duration=0, onclick=show_msg)

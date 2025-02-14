@@ -1,0 +1,7 @@
+Output pandas dataframe
+
+import numpy as np
+import pandas as pd
+
+df = pd.DataFrame(np.random.randn(6, 4), columns=list("ABCD"))
+put_html(df.to_html(border=0))

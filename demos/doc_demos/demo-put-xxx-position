@@ -1,0 +1,13 @@
+`position` parameter of the output function
+
+with use_scope('scope1'):
+    put_text('A')
+## ----
+with use_scope('scope1'):  # ..demo-only
+    put_text('B', position=0)   # insert B before A -> B A
+## ----
+with use_scope('scope1'):  # ..demo-only
+    put_text('C', position=-2)  # insert C after B -> B C A
+## ----
+with use_scope('scope1'):  # ..demo-only
+    put_text('D', position=1)   # insert D before C B -> B D C A

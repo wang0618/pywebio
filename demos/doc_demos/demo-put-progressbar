@@ -1,0 +1,8 @@
+`put_progressbar()` usage
+
+import time
+
+put_progressbar('bar');
+for i in range(1, 11):
+    set_progressbar('bar', i / 10)
+    time.sleep(0.1)

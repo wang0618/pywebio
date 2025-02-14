@@ -1,0 +1,5 @@
+Persistence authentication with username and password
+
+user_name = basic_auth(lambda username, password: username == 'admin' and password == '123',
+                       secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__")
+put_text("Hello, %s. You can refresh this page and see what happen" % user_name)

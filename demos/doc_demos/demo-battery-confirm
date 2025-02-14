@@ -1,0 +1,6 @@
+Blocking confirmation modal
+
+from pywebio_battery import confirm  # ..demo-only
+# ..demo-only
+choice = confirm("Delete File", "Are you sure to delete this file?")
+put_text("Your choice", choice)

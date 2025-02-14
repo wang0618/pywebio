@@ -1,0 +1,9 @@
+Pin widget as output function
+
+put_row([
+    put_input('input'),
+    put_select('select', options=['A', 'B', 'C'])
+])
+
+with use_scope('search-area'):
+    put_input('search', placeholder='Search')

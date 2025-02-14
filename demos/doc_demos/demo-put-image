@@ -1,0 +1,9 @@
+`put_image()` usage
+
+from pywebio import STATIC_PATH  # ..demo-only
+img = open(STATIC_PATH + '/image/favicon_open_32.png', 'rb').read()  # ..demo-only
+img = open('/path/to/some/image.png', 'rb').read()  # ..doc-only
+put_image(img, width='50px')
+
+## ----
+put_image('https://www.python.org/static/img/python-logo.png')

@@ -1,0 +1,4 @@
+Text input
+
+age = input("How old are you?", type=NUMBER)
+put_text('age = %r' % age)  # ..demo-only

@@ -1,0 +1,18 @@
+Blocking form in the popup.
+
+from pywebio_battery import popup_input  # ..demo-only
+# ..demo-only
+def check_password(form):
+    if len(form['password']) < 6:
+        return 'password', 'password length must greater than 6'
+
+form = popup_input(
+    [
+        put_input("username", label="Username"),
+        put_input("password", type=PASSWORD, label="Password"),
+        put_info("If you forget your password, please contact the administrator."),
+    ],
+    title="Login",
+    validate=check_password
+)
+put_text("Login info:", form)

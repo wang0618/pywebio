@@ -1,0 +1,8 @@
+`input()` validation
+
+def check_age(age):
+    if age>30:
+        return 'Too old'
+    elif age<10:
+        return 'Too young'
+input('Input your age', type=NUMBER, validate=check_age)

@@ -1,0 +1,11 @@
+Create cross-cell content with `span()`
+
+put_table([
+    ['C'],
+    [span('E', col=2)],  # 'E' across 2 columns
+], header=[span('A', row=2), 'B'])  # 'A' across 2 rows
+
+put_grid([
+    [put_text('A'), put_text('B')],
+    [span(put_text('A'), col=2)],  # 'A' across 2 columns
+])

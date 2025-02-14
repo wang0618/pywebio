@@ -1,0 +1,9 @@
+use `use_scope()` to open or enter scope
+
+with use_scope('scope1'):  # open and enter a new output: 'scope1'
+    put_text('text1 in scope1')  # output text to scope1
+
+put_text('text in parent scope of scope1')  # output text to ROOT scope
+
+with use_scope('scope1'):  # enter an existing scope: 'scope1'
+    put_text('text2 in scope1')  # output text to scope1

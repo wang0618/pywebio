@@ -1,0 +1,9 @@
+`file_upload()` example
+
+# Upload a file and save to server                      # ..doc-only
+f = input.file_upload("Upload a file")                  # ..doc-only
+open('asset/'+f['filename'], 'wb').write(f['content'])  # ..doc-only
+
+imgs = file_upload("Select some pictures:", accept="image/*", multiple=True)
+for img in imgs:
+    put_image(img['content'])

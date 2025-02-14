@@ -1,0 +1,33 @@
+Basic Output
+
+# Text Output
+put_text("Hello world!")
+## ----
+
+# Table Output
+put_table([
+    ['Commodity', 'Price'],
+    ['Apple', '5.5'],
+    ['Banana', '7'],
+])
+## ----
+
+# Image Output
+put_image(open('/path/to/some/image.png', 'rb').read())  # local image # ..doc-only
+put_image('http://example.com/some-image.png')  # internet image # ..doc-only
+put_image('https://www.python.org/static/img/python-logo.png')  # ..demo-only
+## ----
+
+# Markdown Output
+put_markdown('~~Strikethrough~~')
+## ----
+
+# File Output
+put_file('hello_word.txt', b'hello word!')
+## ----
+
+# Show a PopUp
+popup('popup title', 'popup text content')
+
+# Show a notification message
+toast('New message 🔔')

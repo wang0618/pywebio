@@ -1,0 +1,15 @@
+Layout functions
+
+put_row([
+    put_column([
+        put_code('A'),
+        put_row([
+            put_code('B1'), None,  # None represents the space between the output
+            put_code('B2'), None,
+            put_code('B3'),
+        ]),
+        put_code('C'),
+    ]), None,
+    put_code('D'), None,
+    put_code('E')
+])

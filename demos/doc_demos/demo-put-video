@@ -1,0 +1,4 @@
+`put_video()` usage
+
+url = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+put_video(url)

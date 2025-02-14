@@ -1,0 +1,4 @@
+Select files from the local file system
+
+files = file_picker('.', multiple=True, accept='py')
+put_text(files)

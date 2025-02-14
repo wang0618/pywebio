@@ -1,0 +1,16 @@
+`put_buttons()` usage
+
+from functools import partial
+
+def row_action(choice, id):
+    put_text("You click %s button with id: %s" % (choice, id))
+
+put_buttons(['edit', 'delete'], onclick=partial(row_action, id=1))
+## ----
+
+def edit():
+    put_text("You click edit button")
+def delete():
+    put_text("You click delete button")
+
+put_buttons(['edit', 'delete'], onclick=[edit, delete])

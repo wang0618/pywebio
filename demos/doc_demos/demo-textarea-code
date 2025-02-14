@@ -1,0 +1,7 @@
+`textarea()` code editor style
+
+res = textarea('Text area', code={
+    'mode': "python",
+    'theme': 'darcula'
+})
+put_code(res, language='python')  # ..demo-only

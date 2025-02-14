@@ -1,0 +1,36 @@
+Output table with `put_table()`
+
+# 'Name' cell across 2 rows, 'Address' cell across 2 columns
+put_table([
+    [span('Name',row=2), span('Address', col=2)],
+    ['City', 'Country'],
+    ['Wang', 'Beijing', 'China'],
+    ['Liu', 'New York', 'America'],
+])
+## ----
+
+# Use `put_xxx()` in `put_table()`
+put_table([
+    ['Type', 'Content'],
+    ['html', put_html('X<sup>2</sup>')],
+    ['text', '<hr/>'],
+    ['buttons', put_buttons(['A', 'B'], onclick=...)],  # ..doc-only
+    ['buttons', put_buttons(['A', 'B'], onclick=put_text)],  # ..demo-only
+    ['markdown', put_markdown('`Awesome PyWebIO!`')],
+    ['file', put_file('hello.text', b'hello world')],
+    ['table', put_table([['A', 'B'], ['C', 'D']])]
+])
+## ----
+
+# Set table header
+put_table([
+    ['Wang', 'M', 'China'],
+    ['Liu', 'W', 'America'],
+], header=['Name', 'Gender', 'Address'])
+## ----
+
+# When ``tdata`` is list of dict
+put_table([
+    {"Course":"OS", "Score": "80"},
+    {"Course":"DB", "Score": "93"},
+], header=["Course", "Score"])  # or header=[(put_markdown("*Course*"), "Course"), (put_markdown("*Score*") ,"Score")]

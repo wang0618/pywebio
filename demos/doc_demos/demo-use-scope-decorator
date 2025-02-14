@@ -1,0 +1,12 @@
+`use_scope()` as decorator
+
+import time  # ..demo-only
+from datetime import datetime
+
+@use_scope('time', clear=True)
+def show_time():
+    put_text(datetime.now())
+
+while 1:          # ..demo-only
+   show_time()    # ..demo-only
+   time.sleep(1)  # ..demo-only

@@ -1,0 +1,19 @@
+`put_loading()` usage
+
+for shape in ('border', 'grow'):
+    for color in ('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'):
+        put_text(shape, color)
+        put_loading(shape=shape, color=color)
+
+## ----
+import time  # ..demo-only
+# The loading prompt and the output inside the context will disappear
+# automatically when the context block exits.
+with put_loading():
+    put_text("Start waiting...")
+    time.sleep(3)  # Some time-consuming operations
+put_text("The answer of the universe is 42")
+
+## ----
+# using style() to set the size of the loading prompt
+put_loading().style('width:4rem; height:4rem')
