@@ -15,16 +15,16 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v1
         with:
-          python-version: 3.7
+          python-version: 3.12
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '22'
       - name: Build frontend
         working-directory: ./webiojs
         run: |
           npm install
-          gulp
+          npx gulp
           cp dist/pywebio.min.js ../pywebio/html/js
       - name: PyPi Upload
         run: |
