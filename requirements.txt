@@ -1,36 +1,6 @@
-tornado>=5.0
-user-agents
+pywebio
+google-genai
+pillow
+nodriver
 
-# extra support
-flask
-django
-aiohttp
-starlette
-uvicorn[standard]
-aiofiles
-bokeh
-pandas
-cutecharts
-pyecharts
-plotly
-Pillow
 
-# test requirements
-selenium
-percy-selenium
-coverage
-
-# doc building requirements
-Jinja2
-sphinx
-sphinx-tabs
-sphinx-rtd-theme
-sphinx-toolbox
-sphinx-intl
-# pywebio_battery in master branch
-https://github.com/pywebio/pywebio-battery/archive/refs/heads/master.zip
-
-# demo running requirements
-numpy
-matplotlib
-openai

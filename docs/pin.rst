@@ -1,1 +1,0 @@
-.. automodule:: pywebio.pin
